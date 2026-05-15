@@ -1,0 +1,140 @@
+/* ============================================================
+   Reviews Service — Global Utilities
+   These classes are used across ALL pages and templates.
+   Do not put page-specific styles here.
+   ============================================================ */
+
+/* ── Section spacing ──────────────────────────────────────── */
+.rs-section {
+  padding-top:    5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .rs-section {
+    padding-top:    6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ── Container ────────────────────────────────────────────── */
+.rs-container {
+  width:         100%;
+  max-width:     1280px;
+  margin-left:   auto;
+  margin-right:  auto;
+  padding-left:  1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Section label / eyebrow ──────────────────────────────── */
+.rs-eyebrow {
+  display:         inline-flex;
+  border-radius:   9999px;
+  padding:         0.375rem 1.25rem;
+  font-size:       0.75rem;
+  font-weight:     900;
+  letter-spacing:  0.12em;
+  text-transform:  uppercase;
+}
+
+/* ── Gradient text ────────────────────────────────────────── */
+.rs-gradient-text {
+  background:              linear-gradient(135deg, #1E3A8A, #00C853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip:         text;
+}
+
+/* ── Skip to content (accessibility) ─────────────────────── */
+.skip-link {
+  position:   absolute;
+  top:        -100%;
+  left:       1rem;
+  z-index:    9999;
+  padding:    0.75rem 1.5rem;
+  background: #0D0F12;
+  color:      #fff;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── Screen reader only ────────────────────────────────────── */
+.sr-only {
+  position:   absolute;
+  width:      1px;
+  height:     1px;
+  padding:    0;
+  margin:     -1px;
+  overflow:   hidden;
+  clip:       rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border:     0;
+}
+
+/* ── Smooth fade-in animation ──────────────────────────────── */
+@keyframes rsFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.rs-fade-up {
+  animation: rsFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── FAQ accordion styles ──────────────────────────────────── */
+.rs-faq-panel {
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.rs-faq-panel.hidden {
+  display: none;
+}
+
+/* ── Hero slide styles ─────────────────────────────────────── */
+.rs-slide {
+  transition: opacity 1000ms ease;
+}
+
+.rs-slide-img {
+  transition: opacity 1000ms ease, transform 6000ms ease;
+}
+
+/* ── Dot navigation ────────────────────────────────────────── */
+.rs-dot {
+  transition: all 300ms ease;
+}
+
+/* ── Lazy image fade-in ────────────────────────────────────── */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* ── Focus ring (accessibility) ────────────────────────────── */
+:focus-visible {
+  outline:        2px solid #00C853;
+  outline-offset: 3px;
+  border-radius:  4px;
+}
+
+/* ── Scroll behaviour ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection colour ──────────────────────────────────────── */
+::selection {
+  background: #00C853;
+  color:      #0D0F12;
+}

@@ -1,0 +1,181 @@
+/* ======================================================
+BASE RESET
+====================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #ffffff;
+  color: #0d0f12;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* ======================================================
+GLOBAL TYPOGRAPHY
+====================================================== */
+
+.rs-display-xl {
+  font-size: clamp(54px, 7vw, 96px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.rs-display-lg {
+  font-size: clamp(46px, 6vw, 74px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.rs-display-md {
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.rs-heading-lg {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.rs-heading-md {
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 850;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.rs-heading-sm {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.rs-body-lg {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #4b5563;
+}
+
+.rs-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.rs-small {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* ======================================================
+GLOBAL GRID
+====================================================== */
+
+.rs-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.rs-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.rs-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+@media (max-width: 1023px) {
+  .rs-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rs-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .rs-grid-2,
+  .rs-grid-3,
+  .rs-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .rs-display-xl {
+    line-height: 1.02;
+  }
+
+  .rs-display-lg {
+    line-height: 1.04;
+  }
+}

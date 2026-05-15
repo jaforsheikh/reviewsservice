@@ -1,0 +1,30 @@
+{
+  "name": "reviewsservice-theme",
+  "version": "1.0.0",
+  "description": "Premium custom WordPress theme for Reviews Service using Tailwind CSS, custom PHP templates, responsive design, and animations.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/app.css --watch",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/app.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/app.css --minify"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "tailwindcss",
+    "reviewsservice",
+    "agency"
+  ],
+  "author": "J@far Shaikh",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "react-icons": "^5.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
+  }
+}

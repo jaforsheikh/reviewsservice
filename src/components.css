@@ -1,0 +1,92 @@
+/* ======================================================
+GLOBAL BUTTONS
+====================================================== */
+
+.rs-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+         bg-green-600 text-black text-sm font-extrabold transition-all duration-200;
+}
+
+.rs-btn-primary:hover {
+  @apply bg-green-500 -translate-y-0.5;
+}
+
+.rs-btn-dark {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+         bg-black text-white text-sm font-extrabold transition-all duration-200;
+}
+
+.rs-btn-dark:hover {
+  @apply bg-gray-900 -translate-y-0.5;
+}
+
+.rs-btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+         bg-white text-gray-800 text-sm font-extrabold border border-gray-200 transition-all duration-200;
+}
+
+.rs-btn-outline:hover {
+  @apply text-black border-black -translate-y-0.5;
+}
+
+/* ======================================================
+GLOBAL BADGE
+====================================================== */
+
+.rs-badge {
+  @apply inline-flex items-center justify-center rounded-full px-4 py-2
+         bg-green-100 text-green-600 text-xs font-extrabold border border-green-200;
+}
+
+/* ======================================================
+GLOBAL SECTION HEADING
+====================================================== */
+
+.rs-section-header {
+  @apply max-w-3xl mx-auto text-center;
+}
+
+.rs-section-title {
+  @apply mt-6 text-black font-extrabold leading-tight
+         text-[clamp(2.25rem,5vw,4rem)] tracking-tight;
+}
+
+.rs-section-description {
+  @apply mt-6 text-gray-600 text-lg font-medium leading-relaxed;
+}
+
+/* ======================================================
+GLOBAL CARD
+====================================================== */
+
+.rs-card {
+  @apply bg-white rounded-2xl border border-gray-200 shadow-md
+         transition-all duration-300;
+}
+
+.rs-card:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+/* ======================================================
+GLOBAL CTA BOX
+====================================================== */
+
+.rs-cta-box {
+  @apply relative overflow-hidden rounded-3xl p-14
+         bg-gradient-to-tr from-gray-900 to-black text-white;
+}
+
+.rs-cta-box h2 {
+  @apply text-white text-[clamp(2.125rem,5vw,3.625rem)] font-extrabold leading-tight;
+}
+
+.rs-cta-box p {
+  @apply mt-4 text-white/70 text-base leading-relaxed max-w-xl;
+}
+
+@media (max-width: 767px) {
+  .rs-cta-box {
+    @apply p-8;
+  }
+}

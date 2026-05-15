@@ -1,0 +1,51 @@
+/* ============================================================
+   Reviews Service — CSS Entry Point
+   Build: npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/app.css --minify
+
+   Import order matters:
+   1. Tailwind base
+   2. Our base reset
+   3. Global utilities
+   4. Layout
+   5. Components
+   6. Pages
+   7. Dashboard (heavy — only loads when needed via JS class)
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* ── Base ──────────────────────────────────────────────────── */
+@import "./base.css";
+@import "./global.css";
+
+/* ── Layout ────────────────────────────────────────────────── */
+@import "./layout/header.css";
+@import "./layout/navigation.css";
+@import "./layout/footer.css";
+
+/* ── Components ────────────────────────────────────────────── */
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/badges.css";
+@import "./components/forms.css";
+@import "./components/tables.css";
+
+/* ── Pages ─────────────────────────────────────────────────── */
+@import "./pages/home.css";
+@import "./pages/about.css";
+@import "./pages/services.css";
+@import "./pages/contact.css";
+@import "./pages/pricing.css";
+
+/* ── WooCommerce ───────────────────────────────────────────── */
+@import "./woocommerce.css";
+
+/* ── Elementor safe overrides ──────────────────────────────── */
+@import "./elementor-safe.css";
+
+/* ── Dashboard ─────────────────────────────────────────────── */
+@import "./dashboard/dashboard.css";
+@import "./dashboard/messages.css";
+@import "./dashboard/orders.css";
+@import "./dashboard/service-progress.css";
+@import "./dashboard/support.css";
